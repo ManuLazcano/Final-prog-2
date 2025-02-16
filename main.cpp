@@ -1,6 +1,8 @@
 #include <raylib.h>
 #include <string>
+
 #include "Grid.h"
+#include "LBlock.h"
 
 int main()
 {
@@ -10,10 +12,9 @@ int main()
     Color darkBlue = { 44, 44, 127, 255};
 
     Grid grid = Grid();
-    grid.grid[0][0] = 1;
-    grid.grid[3][5] = 4;
-    grid.grid[17][9] = 7;
     grid.print();
+
+    LBlock block = LBlock();
 
     InitWindow(gameWidth, gameHeight, gameName.c_str());
     SetTargetFPS(60);
@@ -21,7 +22,9 @@ int main()
     while(!WindowShouldClose()) {
         BeginDrawing();
         ClearBackground(darkBlue);
+
         grid.draw();
+        block.draw();
 
         EndDrawing();
     }
