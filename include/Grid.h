@@ -22,7 +22,6 @@ class Grid
         std::vector<Color> colors;
 
         void initialize();
-        std::vector<Color> getCellColors();
 };
 
 #endif // GRID_H
