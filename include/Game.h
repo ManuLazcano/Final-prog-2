@@ -18,6 +18,7 @@ class Game
 {
     public:
         Grid grid;
+        bool gameOver;
 
         Game();
         Block getRandomBlock();
@@ -37,6 +38,7 @@ class Game
         void rotateBlock();
         void lockBlock();
         bool blockFits();
+        void reset();
 };
 
 #endif // GAME_H

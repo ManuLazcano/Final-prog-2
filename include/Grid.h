@@ -10,6 +10,7 @@ class Grid
         int grid[20][10];
 
         Grid();
+        void initialize();
         void print();
         void draw();
         bool isCellOutside(int row, int column);
@@ -22,7 +23,6 @@ class Grid
         int cellSize;
         std::vector<Color> colors;
 
-        void initialize();
         bool isRowFull(int row);
         void clearRow(int row);
         void moveRowDown(int row, int numRows);

@@ -11,6 +11,14 @@ Grid::Grid() {
     colors = getCellColors();
 }
 
+void Grid::initialize() {
+    for(int row = 0; row < numRows; row++) {
+        for(int column = 0; column < numCols; column++) {
+            grid[row][column] = 0;
+        }
+    }
+}
+
 void Grid::print() {
     for(int row = 0; row < numRows; row++) {
         for(int column = 0; column < numCols; column++) {
@@ -52,14 +60,6 @@ int Grid::clearFullRows() {
 }
 
 /** ***** Private methods ***** */
-
-void Grid::initialize() {
-    for(int row = 0; row < numRows; row++) {
-        for(int column = 0; column < numCols; column++) {
-            grid[row][column] = 0;
-        }
-    }
-}
 
 bool Grid::isRowFull(int row) {
     for(int column = 0; column < numCols; column++) {
