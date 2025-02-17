@@ -12,6 +12,7 @@ class Grid
         Grid();
         void print();
         void draw();
+        bool isCellOutside(int row, int column);
 
     protected:
 
