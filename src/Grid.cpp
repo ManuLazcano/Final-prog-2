@@ -33,6 +33,10 @@ bool Grid::isCellOutside(int row, int column) {
     return !(row >= 0 && row < numRows && column >= 0 && column < numCols);
 }
 
+bool Grid::isCellEmpty(int row, int column) {
+    return grid[row][column] == 0;
+}
+
 /** ***** Private methods ***** */
 
 void Grid::initialize() {
