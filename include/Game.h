@@ -23,6 +23,10 @@ class Game
         Block getRandomBlock();
         std::vector<Block> getAllBlocks();
         void draw();
+        void handleInput();
+        void moveBlockLeft();
+        void moveBlockRight();
+        void moveBlockDown();
 
     private:
         std::vector<Block> blocks;

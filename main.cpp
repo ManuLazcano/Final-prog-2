@@ -15,6 +15,7 @@ int main()
     SetTargetFPS(60);
 
     while(!WindowShouldClose()) {
+        game.handleInput();
         BeginDrawing();
         ClearBackground(darkBlue);
         game.draw();
