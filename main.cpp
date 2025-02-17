@@ -15,6 +15,7 @@ int main()
     grid.print();
 
     LBlock block = LBlock();
+    block.move(4, 3);
 
     InitWindow(gameWidth, gameHeight, gameName.c_str());
     SetTargetFPS(60);

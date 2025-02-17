@@ -20,11 +20,15 @@ class Block
 
         Block();
         void draw();
+        void move(int rows, int columns);
+        std::vector<Position> getCellPositions();
 
     private:
         int cellSize;
         int rotationState;
         std::vector<Color> colors;
+        int rowOffset;
+        int columnOffset;
 };
 
 #endif // BLOCK_H
