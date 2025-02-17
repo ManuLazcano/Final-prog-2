@@ -27,7 +27,7 @@ int main()
     SetTargetFPS(60);
 
     Game game = Game();
-    const double milliseconds = 0.2;
+    const double milliseconds = 0.4;
     // Variables relacionadas con la UI
     Font defaultFont = GetFontDefault();
     double fontSize = 24;

@@ -1,15 +1,15 @@
 #include "colors.h"
 
-const Color darkGrey = {26, 31, 40, 255};
-const Color green = {47, 230, 23, 255};
-const Color red = {232, 18, 18, 255};
-const Color orange = {226, 116, 17, 255};
-const Color yellow = {237, 234, 4, 255};
-const Color purple = {166, 0, 247, 255};
-const Color cyan = {21, 204, 209, 255};
-const Color blue = {13, 64, 216, 255};
-const Color lightBlue = {59, 85, 162, 255};
-const Color darkBlue = {44, 44, 127, 255};
+const Color darkGrey = {34, 40, 49, 255};  // Gris oscuro con un toque azulado
+const Color green = {72, 201, 176, 255};   // Verde menta
+const Color red = {255, 82, 82, 255};      // Rojo vibrante
+const Color orange = {255, 159, 67, 255};  // Naranja brillante
+const Color yellow = {255, 221, 89, 255};  // Amarillo cálido
+const Color purple = {155, 89, 182, 255};  // Púrpura elegante
+const Color cyan = {52, 172, 224, 255};    // Azul celeste
+const Color blue = {64, 115, 158, 255};    // Azul profundo
+const Color lightBlue = {129, 236, 236, 255}; // Azul pastel
+const Color darkBlue = {44, 62, 80, 255};  // Azul noche
 
 std::vector<Color> getCellColors() {
 
