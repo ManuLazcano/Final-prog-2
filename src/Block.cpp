@@ -18,8 +18,8 @@ void Block::draw() {
 }
 
 void Block::move(int rows, int columns) {
-    rowOffset = rows;
-    columnOffset = columns;
+    rowOffset += rows;
+    columnOffset += columns;
 }
 
 std::vector<Position> Block::getCellPositions() {
