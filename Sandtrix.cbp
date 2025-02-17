@@ -13,6 +13,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/Figures" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +24,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="include/Figures" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,7 +36,31 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Block.h" />
+		<Unit filename="include/Figures/IBlock.h" />
+		<Unit filename="include/Figures/JBlock.h" />
+		<Unit filename="include/Figures/LBlock.h" />
+		<Unit filename="include/Figures/OBlock.h" />
+		<Unit filename="include/Figures/SBlock.h" />
+		<Unit filename="include/Figures/TBlock.h" />
+		<Unit filename="include/Figures/ZBlock.h" />
+		<Unit filename="include/Game.h" />
+		<Unit filename="include/Grid.h" />
+		<Unit filename="include/Position.h" />
+		<Unit filename="include/colors.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Block.cpp" />
+		<Unit filename="src/Figures/IBlock.cpp" />
+		<Unit filename="src/Figures/JBlock.cpp" />
+		<Unit filename="src/Figures/LBlock.cpp" />
+		<Unit filename="src/Figures/OBlock.cpp" />
+		<Unit filename="src/Figures/SBlock.cpp" />
+		<Unit filename="src/Figures/TBlock.cpp" />
+		<Unit filename="src/Figures/ZBlock.cpp" />
+		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/Grid.cpp" />
+		<Unit filename="src/Position.cpp" />
+		<Unit filename="src/colors.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

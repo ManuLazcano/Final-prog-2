@@ -17,8 +17,8 @@ bool eventTriggered(double interval) {
 
 int main()
 {
-    const int gameWidth = 300;
-    const int gameHeight = 600;
+    const int gameWidth = 500;
+    const int gameHeight = 620;
     const std::string gameName = "Sandtrix";
     Color darkBlue = { 44, 44, 127, 255};
 
