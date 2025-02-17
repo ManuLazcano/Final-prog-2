@@ -17,7 +17,6 @@
 class Game
 {
     public:
-        Grid grid;
         bool gameOver;
         int score;
 
@@ -26,15 +25,17 @@ class Game
         std::vector<Block> getAllBlocks();
         void draw();
         void handleInput();
-        void moveBlockLeft();
-        void moveBlockRight();
+
         void moveBlockDown();
 
     private:
+        Grid grid;
         std::vector<Block> blocks;
         Block currentBlock;
         Block nextBlock;
 
+        void moveBlockLeft();
+        void moveBlockRight();
         bool isBlockOutside();
         void rotateBlock();
         void lockBlock();
