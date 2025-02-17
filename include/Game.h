@@ -34,6 +34,7 @@ class Game
         Block nextBlock;
 
         bool isBlockOutside();
+        void rotateBlock();
 };
 
 #endif // GAME_H
