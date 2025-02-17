@@ -19,6 +19,7 @@ class Game
     public:
         Grid grid;
         bool gameOver;
+        int score;
 
         Game();
         Block getRandomBlock();
@@ -39,6 +40,7 @@ class Game
         void lockBlock();
         bool blockFits();
         void reset();
+        void updateScore(int linesCleared, int moveDownPoints);
 };
 
 #endif // GAME_H

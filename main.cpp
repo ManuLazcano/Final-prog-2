@@ -1,5 +1,6 @@
 #include <raylib.h>
 #include <string>
+#include <iostream>
 
 #include "Game.h"
 #include "colors.h"
@@ -54,6 +55,12 @@ int main()
             DrawTextEx(defaultFont, "GAME OVER", positionGameOverText, fontSize, spacing, WHITE);
         }
         DrawRectangleRounded(positionRectangleScore, roundness, segments, lightBlue);
+
+        char scoreText[10];
+        sprintf(scoreText, "%d", game.score);
+        Vector2 textSize = MeasureTextEx(defaultFont, scoreText, fontSize, spacing);
+        DrawTextEx(defaultFont, scoreText, {320 + (170 - textSize.x)/2, 65}, fontSize, spacing, WHITE);
+
         DrawRectangleRounded(positionRectangleNextBlock, roundness, segments, lightBlue);
 
         game.draw();
