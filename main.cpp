@@ -1,8 +1,7 @@
 #include <raylib.h>
 #include <string>
 
-#include "Grid.h"
-#include "LBlock.h"
+#include "Game.h"
 
 int main()
 {
@@ -10,11 +9,7 @@ int main()
     const int gameHeight = 600;
     const std::string gameName = "Sandtrix";
     Color darkBlue = { 44, 44, 127, 255};
-
-    Grid grid = Grid();
-    grid.print();
-
-    LBlock block = LBlock();
+    Game game = Game();
 
     InitWindow(gameWidth, gameHeight, gameName.c_str());
     SetTargetFPS(60);
@@ -22,10 +17,7 @@ int main()
     while(!WindowShouldClose()) {
         BeginDrawing();
         ClearBackground(darkBlue);
-
-        grid.draw();
-        block.draw();
-
+        game.draw();
         EndDrawing();
     }
 
