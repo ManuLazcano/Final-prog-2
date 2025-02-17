@@ -14,8 +14,7 @@ class Grid
         void draw();
         bool isCellOutside(int row, int column);
         bool isCellEmpty(int row, int column);
-
-    protected:
+        int clearFullRows();
 
     private:
         int numRows;
@@ -24,6 +23,9 @@ class Grid
         std::vector<Color> colors;
 
         void initialize();
+        bool isRowFull(int row);
+        void clearRow(int row);
+        void moveRowDown(int row, int numRows);
 };
 
 #endif // GRID_H
