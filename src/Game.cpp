@@ -7,6 +7,18 @@ Game::Game() {
     nextBlock = getRandomBlock();
     gameOver = false;
     score = 0;
+    InitAudioDevice();
+    backgroundMusic = LoadMusicStream("sounds/background.wav");
+    PlayMusicStream(backgroundMusic);
+    clearSound = LoadSound("sounds/clear.mp3");
+    gameoverSound= LoadSound("sounds/gameover.wav");
+}
+
+Game::~Game() {
+    UnloadMusicStream(backgroundMusic);
+    UnloadSound(clearSound);
+    UnloadSound(gameoverSound);
+    CloseAudioDevice();
 }
 
 Block Game::getRandomBlock() {
@@ -122,10 +134,16 @@ void Game::lockBlock() {
     }
     currentBlock = nextBlock;
     if(!blockFits()) {
+        PauseMusicStream(backgroundMusic);
+        PlaySound(gameoverSound);
         gameOver = true;
     }
     nextBlock = getRandomBlock();
     int rowsCleared = grid.clearFullRows();
+    if(rowsCleared > 0) {
+        PlaySound(clearSound);
+    }
+
     updateScore(rowsCleared, 1);
 }
 
@@ -146,6 +164,7 @@ void Game::reset() {
     currentBlock = getRandomBlock();
     nextBlock = getRandomBlock();
     score = 0;
+    PlayMusicStream(backgroundMusic);
 }
 
 void Game::updateScore(int linesCleared, int moveDownPoints) {

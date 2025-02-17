@@ -19,8 +19,10 @@ class Game
     public:
         bool gameOver;
         int score;
+        Music backgroundMusic;
 
         Game();
+        ~Game();
         Block getRandomBlock();
         std::vector<Block> getAllBlocks();
         void draw();
@@ -33,6 +35,8 @@ class Game
         std::vector<Block> blocks;
         Block currentBlock;
         Block nextBlock;
+        Sound clearSound;
+        Sound gameoverSound;
 
         void moveBlockLeft();
         void moveBlockRight();

@@ -41,6 +41,7 @@ int main()
     double segments = 6;
 
     while(!WindowShouldClose()) {
+        UpdateMusicStream(game.backgroundMusic);
         game.handleInput();
         if(eventTriggered(milliseconds)) {
             game.moveBlockDown();
